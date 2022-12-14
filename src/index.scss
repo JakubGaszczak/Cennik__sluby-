@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+$poppins: "Poppins";
+$red: #F7012F;
+$purple-font: #200120;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $poppins;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: $purple-font;
+}
+
+label {
+    all: unset; // or all: unset
+  }
+  
+
+/* Red Button */
+button {
+    border: none;
+    background: #F7012F;
+    color: white;
+    border-radius: 1.9rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 1.25rem 3.7rem;
+    cursor: pointer;
+} 
+
+
+@media screen and (max-width: 768px) {
+    * {
+        overflow-x: hidden;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: .8rem 2rem;
+    }
+}
+

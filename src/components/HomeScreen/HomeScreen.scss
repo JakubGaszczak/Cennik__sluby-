@@ -1,0 +1,216 @@
+@import "../../index.scss";
+
+.homeScreen {
+    position: relative;
+}
+
+.homeScreen__nav::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 1rem;
+    width: 100%;
+    background-color: $red;
+}
+
+.homeScreen__nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; 
+    padding-top: 2rem;
+    z-index: 5;
+    background-color: white;
+    height: 8.5rem;
+    z-index: 5;
+}
+
+.homeScreen__nav ul {
+    display: flex;
+    list-style: none;
+
+    li:not(:last-child) {
+        padding: .8rem 1.8rem;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    li:first-child {
+        position: relative;
+    }
+    .new {
+        position: absolute;
+        bottom: 2rem;
+        left: 4.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: $red;
+    }
+}
+
+
+
+.homeScreen__nav__redButton {
+    border: none;
+    background: $red;
+    color: white;
+    border-radius: 1.9rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: .8rem 2.6rem;
+    margin-left: 3rem;
+    cursor: pointer;
+}
+
+.homeScreen__nav__dropDownMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 0.031rem solid #DEDBDB;
+    border-top: 0.188rem solid $red;
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.125rem 0.125rem 0.313rem 0.313rem;
+    padding: .8rem 1.4rem;
+    min-width: 12.5rem;
+}
+
+
+
+.homeScreen__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 48.875rem;
+    margin: 15rem 0 18.5rem 10rem;
+    h4 {
+        color: $red;
+    }
+    p {
+        padding-top: 1rem;
+    }
+}
+
+.homeScreen__text__buttons {
+    button {
+        margin-right: 1rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+    .portfolio__button {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        background-color: white;
+        color: $red;
+        border: 0.125rem solid $red;
+    }
+}
+
+/* Absolute Elements */
+
+.absolute_elemnts {
+    img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    .smallWater {
+        top: calc(50% - 14rem);
+        left: calc(50% - 12rem);
+    }
+    .smallEarth {
+        top: calc(50% - 7rem);
+        left: calc(50% - 5rem);
+    }
+    .smallClouds {
+        top: calc(50% + 16rem);
+        left: calc(50% - 5rem);
+    }
+    .smallBlackhole {
+        left: calc(50% - 20rem);
+        top: calc(50% + 26rem);
+    }
+    .grayVector {
+        top: calc(50% + 3rem);
+        left: calc(50% + 30rem);
+    }
+    .redVector {
+        top: calc(50% + 7rem);
+        left: calc(50% + 32rem);
+    }
+    .coupleDancing {
+        top: calc(50% + 5rem);
+        left: calc(50% + 27rem);
+    }
+    .redCircle {
+        top: calc(50% + 26rem);
+        left: calc(50% + 49rem);
+    }
+}
+
+.homeScreen__nav__mobile {
+    display: none;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.mobile__hamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    .homeScreen__logo {
+        max-width: 8rem;
+        width: 100%;
+    }
+    .hamburgerIcon, .closeIcon {
+        font-size: 2rem;
+    }
+}
+
+.mobile__navList {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    gap: 2rem;
+    height: 100vh;
+    margin: 3rem 0 ;
+}
+
+@media screen and (max-width: 768px) {
+    .absolute_elemnts {
+        display: none;
+    }
+    main {
+        margin: 0;
+        padding: 0 2rem;
+    }
+    .homeScreen__nav__mobile {
+        display: block;
+    }
+    .homeScreen__nav {
+        display: none;
+    }
+    .homeScreen__text {
+        margin: 7rem 0 0 0;
+    }
+    .homeScreen__text__buttons {
+        display: flex;
+        justify-content: center;
+        button {
+            margin-top: 1rem;
+            font-size: .9rem;
+            padding: .8rem 1rem;
+        }
+        .portfolio__button {
+            padding: .8rem 2.3rem;
+        }
+    }
+}
